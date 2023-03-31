@@ -1,0 +1,252 @@
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import LinkRetour from "@/components/Linkretour";
+import styles from "../../styles/_atelier.module.scss";
+import AsideNav from "@/components/AsideNav";
+const Articles = () => {
+  const router = useRouter();
+
+  return (
+    <section className={styles.atelier_section_container}>
+      <div className={styles.atelier_div_container}>
+        <h1 className={styles.atelier_section_h1}>Articles</h1>
+        <LinkRetour retour="Retour" />
+      </div>
+      <article className={styles.atelier_section_article}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+      </article>
+      <article className={styles.atelier_section_article}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+      </article>
+      <article className={styles.atelier_section_article}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+      </article>
+      <article className={styles.atelier_section_article}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+      </article>
+      <article className={styles.atelier_section_article}>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          incidunt ratione autem quaerat! Omnis at possimus accusamus ab ea
+          fugiat excepturi labore! Ex minus optio non consequuntur, tenetur
+          cupiditate provident! Facere nobis odit asperiores officia qui ducimus
+          illum consequatur ut suscipit repudiandae? Vero beatae aut, eaque
+          nobis cumque ullam optio, facere corporis natus at, repellendus quam
+          repudiandae nisi labore dolor! Corporis quae non blanditiis impedit
+          dolor dignissimos maiores saepe commodi nam libero ratione eos,
+          aspernatur deserunt quo in
+        </p>
+      </article>
+      <LinkRetour retour="Retour" />
+      <AsideNav />
+    </section>
+  );
+};
+
+export default Articles;

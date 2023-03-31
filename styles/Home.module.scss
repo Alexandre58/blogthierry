@@ -1,0 +1,48 @@
+/** @extend .index_container_h1;  pour etendre une class*/
+
+//variable scss appel dans le fichier:@import "./_variable.module";
+//appel :  background-color: $primary-color;
+//dans le fichier _variable.module.scss
+// $primary-color: #64ff00;
+// $colorNavFooter: rgb(120, 120, 121);
+// :export {
+//   primaryColor: $primary-color;
+//   colorNavFooter: $colorNavFooter;
+// }
+/*placeholder scss = %displayColumnCenter mieux que les mixin*/
+//appel dans le selecteur  ==  @extend %displayRowCenter;
+@import "./variable.module";
+%displayRowCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+%displayColumnCenter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  // border: 2px rgb(238, 13, 13) solid;
+  max-width: 1200px;
+  margin: auto;
+
+  .index_container_h1 {
+    @extend %displayRowCenter;
+    margin-top: 50px;
+    padding: 2rem;
+    border: 1px rgb(19, 19, 19) solid;
+    letter-spacing: 0.8rem;
+  }
+
+  /**container link*/
+  .home_section_container {
+    @extend %displayRowCenter;
+    max-width: 800px;
+    margin: 50px auto;
+    gap: 3rem;
+  }
+}

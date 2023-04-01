@@ -34,8 +34,8 @@
     @extend %displayRowCenter;
     margin-top: 50px;
     padding: 2rem;
-    border: 1px rgb(19, 19, 19) solid;
-    letter-spacing: 0.8rem;
+    //  border: 1px rgb(19, 19, 19) solid;
+    letter-spacing: 1rem;
   }
 
   /**container link*/
@@ -43,6 +43,37 @@
     @extend %displayRowCenter;
     max-width: 800px;
     margin: 50px auto;
-    gap: 3rem;
+    gap: 2rem;
+    .home_Link {
+      //  border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
+      color: $primary-color;
+      background-color: $colorNavFooter;
+      border-radius: 15px;
+      padding: 1rem;
+      .home_Images {
+        //  border: solid 1px black;
+        width: 150px;
+        height: 150px;
+      }
+      .home_Images_widh_differente {
+        width: 250px;
+        height: 150px;
+      }
+      .home_Images_widh_differente_les_ateliers {
+        width: 120px;
+        height: 150px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
   }
 }

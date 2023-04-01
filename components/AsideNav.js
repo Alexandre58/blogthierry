@@ -2,24 +2,25 @@ import React from "react";
 import styles from "../styles/_asideNav.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import img1 from "../assets/img1.jpg";
-import img2 from "../assets/img2.jpg";
-import img3 from "../assets/img3.jpg";
-import img4 from "../assets/img4.jpg";
-import img5 from "../assets/img5.jpg";
-import img6 from "../assets/img6.PNG";
-import img7 from "../assets/img7.jpg";
+import img1 from "../public/images/img1.jpg";
+import img2 from "../public/images/img2.jpg";
+import img3 from "../public/images/img3.jpg";
+import img4 from "../public/images/img4.jpg";
+import img5 from "../public/images/img5.jpg";
+import img6 from "../public/images/img6.PNG";
+import img7 from "../public/images/img7.jpg";
 
 const AsideNav = () => {
   return (
-    <aside className={styles.home_aside_container}>
+    <aside className={styles.aside_container}>
       <Link href={"/articles"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img1}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={3988}
+          height={5982}
+          placeholder="blur"
         />
         Les articles
       </Link>
@@ -29,8 +30,9 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img2}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={640}
+          height={960}
+          placeholder="blur"
         />
         Les ateliers
       </Link>
@@ -39,8 +41,9 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img3}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={640}
+          height={427}
+          placeholder="blur"
         />
         Les fours
       </Link>
@@ -49,8 +52,9 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img4}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={640}
+          height={427}
+          placeholder="blur"
         />
         Les tours
       </Link>
@@ -59,8 +63,9 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img5}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={375}
+          height={375}
+          placeholder="blur"
         />
         Le tournage
       </Link>
@@ -69,8 +74,9 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img1}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={3988}
+          height={5982}
+          placeholder="blur"
         />
         Les news
       </Link>
@@ -79,18 +85,19 @@ const AsideNav = () => {
           className={styles.asideNav_Images}
           src={img6}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={1847}
+          height={867}
         />
         Le web
       </Link>
-      <Link href={"/web/contact"} className={styles.asideNav_link}>
+      <Link href={"/contact"} className={styles.asideNav_link}>
         <Image
           className={styles.asideNav_Images}
           src={img7}
           alt="Picture of the author"
-          width={50}
-          height={50}
+          width={640}
+          height={427}
+          placeholder="blur"
         />
         Contact
       </Link>

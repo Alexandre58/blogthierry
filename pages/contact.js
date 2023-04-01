@@ -3,7 +3,7 @@ import LinkRetour from "@/components/Linkretour";
 import React from "react";
 import styles from "../styles/_atelier.module.scss";
 import Image from "next/image";
-import img7 from "../assets/img7.jpg";
+import img7 from "../public/images/img7.jpg";
 const Contact = () => {
   return (
     <section className={styles.atelier_section_container}>

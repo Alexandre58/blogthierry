@@ -2,7 +2,8 @@ import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
 import styles from "../../styles/_atelier.module.scss";
-const Atelier = ({ retour }) => {
+
+const Atelier = () => {
   return (
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../styles/_atelier.module.scss";
 import LinkRetour from "@/components/Linkretour";
 import Image from "next/image";
-import img6 from "../assets/img6.PNG";
+import img6 from "../public/images/img6.PNG";
 
 const Web = () => {
   return (

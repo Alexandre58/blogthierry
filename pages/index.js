@@ -1,17 +1,31 @@
+//HEAD
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "@next/font/google";
+//STYLES
 import styles from "../styles/Home.module.scss";
-
+//LINK
 import Link from "next/link";
+//CARD
 import CardArticles from "@/components/CardArticles";
+//ROUTER
 import { useRouter } from "next/router";
 import AsideNav from "@/components/AsideNav";
+//IMAGES
+import Image from "next/image";
+import img1 from "../public/images/img1.jpg";
+import img2 from "../public/images/img2.jpg";
+import img3 from "../public/images/img3.jpg";
+import img4 from "../public/images/img4.jpg";
+import img5 from "../public/images/img5.jpg";
+import img6 from "../public/images/img6.PNG";
+import img7 from "../public/images/img7.jpg";
+import img8news from "../public/images/img8news.jpg";
+
 const path = require("path");
 //appel api
 export async function getStaticProps() {
-  const data2 = fetch("https://jsonplaceholder.typicode.com/posts");
-  const articles = await (await data2).json();
+  const data2 = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const articles = await data2.json();
   return {
     props: {
       articles,
@@ -44,21 +58,50 @@ export default function Home(props) {
           {/** <p>Router ={router.asPath}</p>*/}
         </div>
         <section className={styles.home_section_container}>
-          <Link href={"/articles"}>
+          {/**type de card */}
+          <Link className={styles.home_Link} href={"/articles"}>
+            <Image
+              className={styles.home_Images}
+              src={img1}
+              alt="Picture of the author"
+              width={3988}
+              height={5982}
+              placeholder="blur"
+            />
             <CardArticles
               title="Les articles"
               description={"Nos articles sur la céramique"}
               commentaire={commentaires + "..."}
             />
           </Link>
-          <Link href={"/articles/atelier"}>
+          {/** card 2*/}
+          <Link className={styles.home_Link} href={"/articles/atelier"}>
+            <Image
+              className={styles.home_Images_widh_differente_les_ateliers}
+              src={img2}
+              alt="Picture of the author"
+              width={640}
+              height={960}
+              placeholder="blur"
+            />
             <CardArticles
               title="Les ateliers"
               description={props.articles[1].title}
-              commentaire={props.articles[1].body + "..."}
+              commentaire={
+                props.articles[1].body.slice(0, 150) + "...lire la suite"
+              }
             />
           </Link>
-          <Link href={"/articles/four"}>
+          {/**card 3 */}
+          <Link className={styles.home_Link} href={"/articles/four"}>
+            <Image
+              className={styles.home_Images_widh_differente}
+              src={img3}
+              alt="Picture of the author"
+              width={640}
+              height={427}
+              placeholder="blur"
+            />
             <CardArticles
               title="Les Fours"
               description={"Les réparations et les fours innovants"}
@@ -67,7 +110,16 @@ export default function Home(props) {
               }
             />
           </Link>
-          <Link href={"/articles/tour"}>
+          {/**card 4 */}
+          <Link className={styles.home_Link} href={"/articles/tour"}>
+            <Image
+              className={styles.home_Images}
+              src={img4}
+              alt="Picture of the author"
+              width={640}
+              height={427}
+              placeholder="blur"
+            />
             <CardArticles
               title="Les Tours"
               description={"Les tours Models ?"}
@@ -76,7 +128,16 @@ export default function Home(props) {
               }
             />
           </Link>
-          <Link href={"/articles/tournage"}>
+          {/**card 5 */}
+          <Link className={styles.home_Link} href={"/articles/tournage"}>
+            <Image
+              className={styles.home_Images}
+              src={img5}
+              alt="Picture of the author"
+              width={375}
+              height={375}
+              placeholder="blur"
+            />
             <CardArticles
               title="Le tournage"
               description={"Videos et autre astuces"}
@@ -85,10 +146,52 @@ export default function Home(props) {
               }
             />
           </Link>
-          <Link href={"/articles/nouveauarticle"}>
+          {/**card 6 */}
+          <Link className={styles.home_Link} href={"/articles/nouveauarticle"}>
+            <Image
+              className={styles.home_Images}
+              src={img8news}
+              alt="Picture of the author"
+              width={640}
+              height={706}
+            />
             <CardArticles
               title="nouveaux articles"
               description={"Les derniers articles à voir"}
+              commentaire={
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,bonjour a vous bande  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi "
+              }
+            />
+          </Link>
+          {/**card 7 */}
+          <Link className={styles.home_Link} href={"/web"}>
+            <Image
+              className={styles.home_Images_widh_differente}
+              src={img6}
+              alt="Picture of the author"
+              width={1847}
+              height={867}
+            />
+            <CardArticles
+              title="Info site internet"
+              description={"Créer votre site ... des solutions"}
+              commentaire={
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,bonjour a vous bande  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi "
+              }
+            />
+          </Link>
+          {/**card 8 */}
+          <Link className={styles.home_Link} href={"/contact"}>
+            <Image
+              className={styles.home_Images_widh_differente}
+              src={img7}
+              alt="Picture of the author"
+              width={640}
+              height={427}
+            />
+            <CardArticles
+              title="Nous contacter"
+              description={"Contact et autres infos"}
               commentaire={
                 "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,bonjour a vous bande  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi "
               }

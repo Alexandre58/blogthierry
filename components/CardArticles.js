@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "../styles/_cardArticles.module.scss";
 
-const CardArticles = ({ title, description, commentaire }) => {
+const CardArticles = ({ title, description, commentaire, articles }) => {
   console.log(title);
 
   return (

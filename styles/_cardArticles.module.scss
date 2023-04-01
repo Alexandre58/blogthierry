@@ -7,18 +7,12 @@
   justify-content: center;
   gap: 2rem;
   // border: solid 1px black;
-  background-color: $colorNavFooter;
-  box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
-  border-radius: 15px;
+
   padding: 1rem;
-  min-width: 350px;
-  min-height: 300px;
+  min-width: 150px;
+  min-height: 200px;
   color: $primary-color;
-  &:hover {
-    transform: scale(1.02);
-  }
+
   .CardArticles_h2 {
     letter-spacing: 0.5rem;
   }

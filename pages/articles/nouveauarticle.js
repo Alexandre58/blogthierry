@@ -8,7 +8,7 @@ const NouvelleArticle = () => {
   return (
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>
-        <h1 className={styles.atelier_section_h1}>Nouveaux articles</h1>
+        <h1 className={styles.atelier_section_h1}>NEWS</h1>
         <LinkRetour retour="Retour" />
       </div>
       <article className={styles.atelier_section_article}>

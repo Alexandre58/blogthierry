@@ -11,7 +11,7 @@ const NavBar = () => {
         <Link href={"/web"} className={styles.navbar_Nav_link}>
           Web
         </Link>
-        <Link href={"/web/contact"} className={styles.navbar_Nav_link}>
+        <Link href={"/contact"} className={styles.navbar_Nav_link}>
           Contact
         </Link>
       </nav>

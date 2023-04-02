@@ -1,6 +1,6 @@
 @import "./variable.module";
 
-.atelier_section_container {
+.users_section_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,11 +8,11 @@
   max-width: 900px;
   margin: 100px auto;
   gap: 3rem;
-  .atelier_div_container {
+  .users_div_container {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    & .atelier_section_h1 {
+    & .users_section_h1 {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,42 +24,46 @@
       height: 50px;
       padding: 2rem;
     }
-    .atelier_section_div_link {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
   }
-  .atelier_section_article {
+  .users_section_article {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    //   border: solid 1px black;
+    //border: solid 1px black;
     border-radius: 15px;
     padding: 2rem;
     box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     background-color: $colorNavFooter;
+    .users_section_article_map_div {
+      display: flex;
+      justify-content: space-between;
+      border: solid 2px black;
+      width: 90%;
+      padding: 1rem;
+      & u {
+        color: blue;
+      }
+    }
   }
 
   //pages contact, web ...
-  .web_Images {
-    //border: 2px solid red;
-    width: 100%;
-    height: 80%;
+  .users_Images {
+    border: 2px solid red;
+    width: 20%;
+    height: 100px;
     object-fit: fill;
   }
-  .atelier_section_article_link {
+  .users_section_article_link {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
     border-radius: 15px;
-
     box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);

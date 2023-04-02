@@ -101,6 +101,9 @@ const AsideNav = () => {
         />
         Contact
       </Link>
+      <Link href={"/users"} className={styles.asideNav_link}>
+        Adresse Ateliers
+      </Link>
     </aside>
   );
 };

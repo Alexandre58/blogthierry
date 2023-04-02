@@ -4,6 +4,9 @@ import Link from "next/link";
 import LinkRetour from "@/components/Linkretour";
 import styles from "../../styles/_articles.module.scss";
 import AsideNav from "@/components/AsideNav";
+//images
+import Image from "next/image";
+import img8 from "../../public/images/img8news.jpg";
 //import uuid
 import { v4 as uuidv4 } from "uuid";
 const Articles = ({ articles }) => {
@@ -15,7 +18,10 @@ const Articles = ({ articles }) => {
         <h1 className={styles.article_section_h1}>Articles</h1>
         <LinkRetour retour="Retour" />
       </div>
-      <div className={styles.article_section_article_div}>
+      <div
+        className={styles.article_section_article_div}
+        style={{ backgroundImage: `url(${img8.src})` }}
+      >
         {articles.map((article) => (
           <article key={uuidv4()}>
             <Link

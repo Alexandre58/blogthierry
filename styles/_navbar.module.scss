@@ -20,6 +20,9 @@
     border-radius: 5px;
     padding: 1rem;
     height: 30px;
+    box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     background-color: aliceblue;
     &:hover {
       transform: scale(1.05);

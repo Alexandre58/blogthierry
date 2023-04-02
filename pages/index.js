@@ -20,6 +20,8 @@ import img5 from "../public/images/img5.jpg";
 import img6 from "../public/images/img6.PNG";
 import img7 from "../public/images/img7.jpg";
 import img8news from "../public/images/img8news.jpg";
+import AdresseAteliers from "@/components/AdresseAteliers";
+import { isAbsolute } from "path";
 
 const path = require("path");
 //appel api
@@ -50,11 +52,8 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {/**  {props.articles.map((article) => (
-          <li key={article.id}>{article.title}</li>
-        ))} */}
         <div className={styles.index_container_h1}>
-          <h1>Bienvenu sur EICERAMIQUE </h1>
+          <h1>EICERAMIQUE</h1>
           {/** <p>Router ={router.asPath}</p>*/}
         </div>
         <section className={styles.home_section_container}>
@@ -173,7 +172,7 @@ export default function Home(props) {
               height={867}
             />
             <CardArticles
-              title="Info site internet"
+              title="site internet"
               description={"Créer votre site ... des solutions"}
               commentaire={
                 "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,bonjour a vous bande  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi  ullam optio, facere corporis natus at, repellendus quam repudiandae nisi "
@@ -197,6 +196,11 @@ export default function Home(props) {
               }
             />
           </Link>
+          <AdresseAteliers
+            title={
+              "Voir l'adresse des ateliers de céramique present sur le site"
+            }
+          />
         </section>
         <AsideNav />
       </main>

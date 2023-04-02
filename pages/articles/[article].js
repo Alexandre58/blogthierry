@@ -1,6 +1,7 @@
 import AsideNav from "@/components/AsideNav";
 import LinkArticles from "@/components/LinkArticles";
 import LinkRetour from "@/components/Linkretour";
+import RetourneAdresse from "@/components/RetourneAdresse";
 import React from "react";
 import styles from "../../styles/_atelier.module.scss";
 
@@ -18,7 +19,6 @@ const Article = ({ article }) => {
         <p>{article.body}</p>
       </article>
       <AsideNav />
-      <LinkArticles retour="Retour liste d'article" />
     </section>
   );
 };

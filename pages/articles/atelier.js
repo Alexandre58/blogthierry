@@ -1,3 +1,4 @@
+import AdresseAteliers from "@/components/AdresseAteliers";
 import AsideNav from "@/components/AsideNav";
 import LinkRetour from "@/components/Linkretour";
 import React from "react";
@@ -8,7 +9,10 @@ const Atelier = () => {
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>
         <h1 className={styles.atelier_section_h1}>Les Ateliers</h1>
-        <LinkRetour retour="Retour" />
+        <div className={styles.atelier_section_div_link}>
+          <LinkRetour retour="Retour" />
+          <AdresseAteliers title={"Adresse des Ateliers"} />
+        </div>
       </div>
       <article className={styles.atelier_section_article}>
         <p>

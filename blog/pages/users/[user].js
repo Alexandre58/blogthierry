@@ -6,6 +6,7 @@ import styles from "../../styles/_[user].module.scss";
 
 const User = ({ user }) => {
   console.log(user);
+
   return (
     <section className={styles.users_section_container}>
       <div className={styles.users_div_container}>
@@ -54,8 +55,8 @@ const User = ({ user }) => {
 //POUR AFFICHER DES PAGES POUR CHAQUE UTILISATEUR  getStaticPath() GETsTATICpROPS()
 export async function getStaticProps(context) {
   const id = context.params.user;
-  const data = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-  const user = await data.json();
+  const data2 = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+  const user = await data2.json();
   return {
     props: {
       user,
@@ -64,6 +65,7 @@ export async function getStaticProps(context) {
 }
 export async function getStaticPaths() {
   const data = await fetch("https://jsonplaceholder.typicode.com/users");
+
   const users = await data.json();
 
   const paths = users.map((item) => ({

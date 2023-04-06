@@ -40,8 +40,9 @@ const AllUsers = ({ users }) => {
 };
 //appel api jsonplaceholder
 export async function getStaticProps() {
-  const data2 = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await data2.json();
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  console.log(res);
+  const users = await res.json();
   return {
     props: {
       users,

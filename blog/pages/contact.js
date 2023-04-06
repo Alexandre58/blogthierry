@@ -5,6 +5,7 @@ import styles from "../styles/_atelier.module.scss";
 import Image from "next/image";
 import img7 from "../public/images/img7.jpg";
 import Formulaire from "@/components/formulaire";
+
 const Contact = () => {
   return (
     <section className={styles.atelier_section_container}>

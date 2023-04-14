@@ -8,6 +8,7 @@ if (resultEnv.error) {
 }
 //console.log(resultEnv.parsed);
 //bodyparser
+
 app.use(express.json());
 ///CORS pour que le fontend puisse etre e,n relation avec le backend
 app.use((req, res, next) => {
@@ -43,16 +44,20 @@ const sequelize = new Sequelize(
     await sequelize.authenticate();
     await User.sync({ alter: true });
     //  Create a new user pour essai de la base de donnée cela fontion tres bien, attention creer un user a chaque fois
-    // {
-    //   await User.create({
-    //     username: "Atelier de Caen",
-    //     firstname: "Beatrice",
-    //     name: "ALEXANDRE",
-    //     email: "beatrice@gmail.com",
-    //     password: "cerche",
-    //     confirmpassword: "cerche",
-    //   });
-    // }
+    {
+      await User.create({
+        userId: 2,
+        username: "Atelier de Blois",
+        firstname: "Tim2",
+        name: "alexandre",
+        comment:
+          "Atelier mis en place il y a une vingtaine d'années avec une production de grés et four succéssif bois gaz, éléctrique",
+        email: "tony@gmail.com",
+        password: "cerche",
+        confirmpassword: "cerche",
+        isadmin: 0,
+      });
+    }
     console.log(
       "***Connexion a phpmyadmin mariadb base de donnee eiceramique connecté ok root et sans mot de passe****"
     );
@@ -60,42 +65,22 @@ const sequelize = new Sequelize(
     console.error("Unable to connect to the database:", error);
   }
 })();
-
-/*OPENCLASSROOMS ne fonctionne pas car pas compathible avec
-app.get("/users", (req, res, next) => {
-  const stuff = [
-    {
-      _id: "oeihfzeoi",
-      title: "Mon premier objet",
-      description: "Les infos de mon premier objet",
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2019/06/11/18/56/camera-4267692_1280.jpg",
-      price: 4900,
-      userId: "qsomihvqios",
-    },
-    {
-      _id: "oeihfzeomoihi",
-      title: "Mon deuxième objet",
-      description: "Les infos de mon deuxième objet",
-      imageUrl:
-        "https://cdn.pixabay.com/photo/2019/06/11/18/56/camera-4267692_1280.jpg",
-      price: 2900,
-      userId: "qsomihvqios",
-    },
-  ];
-  res.status(200).json(users);
-});
-*/
 //AVEC VIDEO SEQUELIZE
 //creation d'un model
 const User = sequelize.define("User", {
   userId: {
     type: DataTypes.STRING,
   },
+  username: {
+    type: DataTypes.STRING,
+  },
   firstname: {
     type: DataTypes.STRING,
   },
   name: {
+    type: DataTypes.STRING,
+  },
+  comment: {
     type: DataTypes.STRING,
   },
   email: {
@@ -107,33 +92,39 @@ const User = sequelize.define("User", {
   confirmpassword: {
     type: DataTypes.STRING,
   },
+  isadmin: {
+    type: DataTypes.BOOLEAN,
+  },
 });
 //FIN initialisation DB server
 
 //get
-app.get("/", async (req, res) => {
+app.get("/api/users", async (req, res) => {
   // res.send("Hello World server lancé !!");
   //affichage dans le site web avec users et non Users car sequelize change tour le nom en minuscule et avec un s
   const users = await User.findAll();
   console.log("users : ", users);
   const usersDisplay = users.map((user) => {
-    return `${user.dataValues.username} - ${user.dataValues.email}`;
+    return `${user.dataValues.name} - ${user.dataValues.firstname} - ${user.dataValues.comment} - ${user.dataValues.email} - ${user.dataValues.password} - ${user.dataValues.confirmpassword}`;
   });
   //si dessous , si il n'y a pas de reponses la page recharge indefiniment !
-  res.send(usersDisplay.join(" // "));
+  res.send(usersDisplay.join(" //******</br> "));
 });
-app.post("/register-user", async (req, res) => {
+//poster les users sur la base de donnée
+app.post("/api/register-user", async (req, res) => {
   console.log("req.body", req.body);
   await User.create({
+    userId: req.body.userId,
     username: req.body.username,
     firstname: req.body.firstname,
     name: req.body.name,
+    comment: req.body.comment,
     email: req.body.email,
     password: req.body.password,
     confirmpassword: req.body.confirmpassword,
+    isadmin: req.body.isadmin,
   });
   res.redirect("/");
 });
 
-//export app pour y avoir acces dans tout les fichiers dont le server ect...
 module.exports = app;

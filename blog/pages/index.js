@@ -22,6 +22,7 @@ import img7 from "../public/images/img7.jpg";
 import img8news from "../public/images/img8news.jpg";
 import AdresseAteliers from "@/components/AdresseAteliers";
 import { isAbsolute } from "path";
+import { useEffect, useState } from "react";
 
 const path = require("path");
 //appel api
@@ -40,9 +41,19 @@ export default function Home(props) {
   console.log(props.articles[0].title);
   console.log("******************");
   const commentaires = props.articles[0].body;
-
   console.log(commentaires);
   const router = useRouter();
+  //Essai fetch sur la base de donnée phpmyadmin eiceramique
+  // const [users, setUsers] = useState([]);
+  // const URL = "http://localhost:3001/users";
+  // useEffect(() => {
+  //   fetch(URL)
+  //     .then((res) => res.json())
+  //     .then((res) => (users) => setUsers(users));
+  // }, []);
+
+  //Fin fetch sur la base de donnée phpmyadmin eiceramique
+
   return (
     <>
       <Head>
@@ -54,6 +65,7 @@ export default function Home(props) {
       <main className={styles.main}>
         <div className={styles.index_container_h1}>
           <h1>EICERAMIQUE</h1>
+
           {/** <p>Router ={router.asPath}</p>*/}
         </div>
         <section className={styles.home_section_container}>

@@ -21,23 +21,6 @@ import styles from "../../styles/_atelier.module.scss";
 // }
 
 const Atelier = () => {
-  // let URL = "http://localhost:3001/api/users";
-  // const fetcher = async () => {
-  //   try {
-  //     const response = await fetch(URL);
-
-  //     if (!response.ok) {
-  //       throw new Error(`Failed to retrieve data ${URL}}`);
-  //     }
-
-  //     const data = await response.json();
-  //     console.log(data);
-  //     return data;
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
   return (
     <section className={styles.atelier_section_container}>
       <div className={styles.atelier_div_container}>

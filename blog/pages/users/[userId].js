@@ -48,12 +48,14 @@ const User = (props) => {
         <div className={styles.users_section_article_div_adresse}>
           <p>
             <span>
-              <u>Email: {props.article[0].email}</u>
+              <u>Email:</u> {props.article[0].email}
             </span>
           </p>
           <p>
             <span>
-              <u>Commentaire: {props.article[0].comment}</u>
+              <u>Commentaire: </u>
+              <br />
+              {props.article[0].comment}
             </span>
           </p>
           {/**       <h3>

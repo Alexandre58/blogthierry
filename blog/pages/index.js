@@ -38,9 +38,10 @@ export async function getStaticProps() {
 
 export default function Home(props) {
   console.log("******************");
-  console.log(props.articles[1].name);
+  console.log(props.articles[0].name);
   console.log("******************");
-  const commentaires = props.articles[1].comment;
+  const title = props.articles[0].username;
+  const commentaires = props.articles[0].comment;
   console.log(commentaires);
   const router = useRouter();
 
@@ -70,7 +71,7 @@ export default function Home(props) {
               placeholder="blur"
             />
             <CardArticles
-              title="Les articles"
+              title={"Les articles"}
               description={"Nos articles sur la céramique"}
               commentaire={commentaires + "..."}
             />
@@ -87,9 +88,9 @@ export default function Home(props) {
             />
             <CardArticles
               title="Les ateliers"
-              description={props.articles[9].username}
+              description={props.articles[4].username}
               commentaire={
-                props.articles[9].comment.slice(0, 150) + "...lire la suite"
+                props.articles[4].comment.slice(0, 150) + "...lire la suite"
               }
             />
           </Link>

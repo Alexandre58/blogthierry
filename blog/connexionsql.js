@@ -21,11 +21,11 @@ const getCustomers = async () => {
   }
 };
 
-const getCustomerById = async (userId) => {
+const getCustomerById = async (id) => {
   try {
     const connection = await mysql.createConnection(mysqlConfig);
     const [rows] = await connection.execute(
-      `SELECT * FROM users WHERE id=${userId}`
+      `SELECT * FROM users WHERE id=${id}`
     );
     return rows;
   } catch (e) {
@@ -38,7 +38,6 @@ const createCustomer = async (
   username,
   firstname,
   name,
-  adresse,
   comment,
   email,
   password,
@@ -48,7 +47,7 @@ const createCustomer = async (
   try {
     const connection = await mysql.createConnection(mysqlConfig);
     const [rows, fields] = await connection.execute(
-      `INSERT INTO users(userId,username,firstname,name,adresse,comment,email, password,confirmpassword,isadmin) VALUES (${userId},"${username}","${firstname}","${name}","${adresse}","${comment}","${email}","${password}","${confirmpassword}","${isadmin}");`
+      `INSERT INTO users(userId,username,firstname,name, comment, email, password, confirmpassword, isadmin) VALUES ("${userId}", "${username}","${firstname}", "${name}", "${comment}", "${email}", "${password}", "${confirmpassword}", "${isadmin}");`
     );
     return rows;
   } catch (e) {

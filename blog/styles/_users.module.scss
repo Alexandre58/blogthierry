@@ -5,12 +5,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 100px auto;
   gap: 3rem;
   .users_div_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     & .users_section_h1 {
       display: flex;
@@ -19,7 +20,7 @@
       letter-spacing: 2rem;
       font-weight: 900;
       border-bottom: 1px solid black;
-      border-left: 1px solid black !important;
+      border-left: 3px solid black !important;
       border-radius: 50px;
       height: 50px;
       padding: 2rem;
@@ -31,6 +32,7 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    width: 90%;
     //border: solid 1px black;
     border-radius: 15px;
     padding: 2rem;
@@ -42,7 +44,7 @@
       display: flex;
       justify-content: space-between;
       border: solid 2px black;
-      width: 90%;
+      width: 100%;
       padding: 1rem;
       & u {
         color: blue;
@@ -52,9 +54,8 @@
 
   //pages contact, web ...
   .users_Images {
-    border: 2px solid red;
     width: 20%;
-    height: 100px;
+    height: 150px;
     object-fit: fill;
   }
   .users_section_article_link {

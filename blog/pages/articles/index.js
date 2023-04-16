@@ -29,8 +29,8 @@ const Articles = ({ articles }) => {
               href={`/articles/${article.id.toString()}`}
             >
               <p>ARTICLE {article.id} sur 100</p>
-              <p>{article.title.slice(0, 30) + " ..."}</p>
-              {console.log(article.title)}
+              <p>{article.username.slice(0, 30) + " ..."}</p>
+              {console.log(article.username)}
 
               <u> Lire la suite</u>
             </Link>
@@ -44,7 +44,7 @@ const Articles = ({ articles }) => {
 };
 //appel api jsonplaceholder
 export async function getStaticProps() {
-  const data2 = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data2 = await fetch("http://localhost:3000/api/users");
   const articles = await data2.json();
   return {
     props: {

@@ -3,33 +3,60 @@ import LinkRetour from "@/components/Linkretour";
 import RetourneAdresse from "@/components/RetourneAdresse";
 import React from "react";
 import styles from "../../styles/_[user].module.scss";
+//RECUP DE TOUT LES ARTICLES  POUR CREER DES PAGES POUR CHAQUE ARTICLE AVEC [ARTICLE];JS
+//ne pas oublier de mettre les props dans***const Article = (props) => {...
+export async function getStaticProps(context) {
+  const id = context.params.userId;
+  //attention backtick dans le fetch
+  const data = await fetch(`http://localhost:3000/api/users/${id}`);
+  const article = await data.json();
+  return {
+    props: {
+      article,
+    },
+  };
+}
+export async function getStaticPaths() {
+  const data = await fetch("http://localhost:3000/api/users");
+  const articles = await data.json();
 
-const User = ({ user }) => {
-  console.log(user);
+  const paths = articles.map((item) => ({
+    params: {
+      userId: item.id.toString(),
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+const User = (props) => {
+  console.log(props.article[0].username);
 
   return (
     <section className={styles.users_section_container}>
       <div className={styles.users_div_container}>
         <h1 className={styles.users_section_h1}>
-          Atelier: {user.name} {user.username}
+          Atelier: {props.article[0].username}
         </h1>
       </div>
       <article className={styles.users_section_article}>
-        <h2>{user.email}</h2>
+        <h2>
+          {props.article[0].name} {props.article[0].firstname}
+        </h2>
         <div className={styles.users_section_article_div_adresse}>
           <p>
             <span>
-              <u>Téléphone:</u>
-            </span>{" "}
-            {user.phone}
+              <u>Email: {props.article[0].email}</u>
+            </span>
           </p>
           <p>
             <span>
-              <u>Site Web:</u>{" "}
+              <u>Commentaire: {props.article[0].comment}</u>
             </span>
-            {user.website}
           </p>
-          <h3>
+          {/**       <h3>
             <span>
               <u>Adresse:</u>
             </span>
@@ -42,7 +69,7 @@ const User = ({ user }) => {
           </p>
           <p className={styles.users_section_article_div_adresse_p}>
             {user.address.suite}
-          </p>
+          </p>*/}
         </div>
       </article>
       <AsideNav />
@@ -51,32 +78,5 @@ const User = ({ user }) => {
     </section>
   );
 };
-
-//POUR AFFICHER DES PAGES POUR CHAQUE UTILISATEUR  getStaticPath() GETsTATICpROPS()
-export async function getStaticProps(context) {
-  const id = context.params.user;
-  const data2 = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-  const user = await data2.json();
-  return {
-    props: {
-      user,
-    },
-  };
-}
-export async function getStaticPaths() {
-  const data = await fetch("https://jsonplaceholder.typicode.com/users");
-
-  const users = await data.json();
-
-  const paths = users.map((item) => ({
-    params: {
-      user: item.id.toString(),
-    },
-  }));
-  return {
-    paths,
-    fallback: false,
-  };
-}
 
 export default User;

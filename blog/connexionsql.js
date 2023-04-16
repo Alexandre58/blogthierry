@@ -21,11 +21,11 @@ const getCustomers = async () => {
   }
 };
 
-const getCustomerById = async (id) => {
+const getCustomerById = async (userId) => {
   try {
     const connection = await mysql.createConnection(mysqlConfig);
     const [rows] = await connection.execute(
-      `SELECT * FROM users WHERE id=${id}`
+      `SELECT * FROM users WHERE id=${userId}`
     );
     return rows;
   } catch (e) {
@@ -38,6 +38,7 @@ const createCustomer = async (
   username,
   firstname,
   name,
+  adresse,
   comment,
   email,
   password,
@@ -47,7 +48,7 @@ const createCustomer = async (
   try {
     const connection = await mysql.createConnection(mysqlConfig);
     const [rows, fields] = await connection.execute(
-      `INSERT INTO users(id, first_name, last_name) VALUES (${userId}, "${username}","${firstname}", "${name}", "${comment}", "${email}", "${password}", "${confirmpassword}, "${isadmin}"");`
+      `INSERT INTO users(userId,username,firstname,name,adresse,comment,email, password,confirmpassword,isadmin) VALUES (${userId},"${username}","${firstname}","${name}","${adresse}","${comment}","${email}","${password}","${confirmpassword}","${isadmin}");`
     );
     return rows;
   } catch (e) {
@@ -55,11 +56,11 @@ const createCustomer = async (
   }
 };
 
-const deleteCustomerById = async (id) => {
+const deleteCustomerById = async (userId) => {
   try {
     const connection = await mysql.createConnection(mysqlConfig);
     const [rows, fields] = await connection.execute(
-      `DELETE FROM users WHERE id = ${id};`
+      `DELETE FROM users WHERE id = ${userId};`
     );
     return rows;
   } catch (e) {

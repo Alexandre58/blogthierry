@@ -27,7 +27,7 @@ import { useEffect, useState } from "react";
 const path = require("path");
 //appel api
 export async function getStaticProps() {
-  const data2 = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data2 = await fetch("http://localhost:3000/api/users");
   const articles = await data2.json();
   return {
     props: {
@@ -38,21 +38,11 @@ export async function getStaticProps() {
 
 export default function Home(props) {
   console.log("******************");
-  console.log(props.articles[0].title);
+  console.log(props.articles[1].name);
   console.log("******************");
-  const commentaires = props.articles[0].body;
+  const commentaires = props.articles[1].comment;
   console.log(commentaires);
   const router = useRouter();
-  //Essai fetch sur la base de donnée phpmyadmin eiceramique
-  // const [users, setUsers] = useState([]);
-  // const URL = "http://localhost:3001/users";
-  // useEffect(() => {
-  //   fetch(URL)
-  //     .then((res) => res.json())
-  //     .then((res) => (users) => setUsers(users));
-  // }, []);
-
-  //Fin fetch sur la base de donnée phpmyadmin eiceramique
 
   return (
     <>
@@ -97,9 +87,9 @@ export default function Home(props) {
             />
             <CardArticles
               title="Les ateliers"
-              description={props.articles[1].title}
+              description={props.articles[9].username}
               commentaire={
-                props.articles[1].body.slice(0, 150) + "...lire la suite"
+                props.articles[9].comment.slice(0, 150) + "...lire la suite"
               }
             />
           </Link>

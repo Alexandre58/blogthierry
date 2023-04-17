@@ -12,7 +12,8 @@
   box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
-  .navbar_Nav_link {
+  .navbar_Nav_link,
+  .navbar_Nav_link_active {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,8 +25,15 @@
     -webkit-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -9px 6px 34px -1px rgba(0, 0, 0, 0.75);
     background-color: aliceblue;
+    letter-spacing: 0.3rem;
     &:hover {
       transform: scale(1.05);
     }
+  }
+  .navbar_Nav_link_active {
+    border-bottom: solid 2px rgb(33, 40, 47);
+    font-weight: 900;
+    background-color: rgb(84, 87, 91);
+    color: rgb(247, 249, 251);
   }
 }

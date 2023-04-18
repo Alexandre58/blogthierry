@@ -1,4 +1,5 @@
 import React, { useCallback, useRef } from "react";
+import styles from "../styles/_formulaire.module.scss";
 //en dessous du code deuxieme formulaire provient de vitrine projet 4(ne fonctionne pas ici ?!)
 const Formulaire = () => {
   const firstname = useRef();
@@ -34,7 +35,7 @@ const Formulaire = () => {
 
   return (
     <>
-      <div className="flexh-screen_container">
+      <div className={styles.formulaire_div_container}>
         <h1 className="text-3xl">
           Signup1 avec useRef le deuxieme est en projet 4
         </h1>
@@ -47,63 +48,66 @@ const Formulaire = () => {
           Dans le projet 4 le formulaire se raffrai à chaque tape sur le
           clavier.
         </p>
-        <form className="form_container" onSubmit={formHandler()}>
-          <div className="flexflex-colmb-4">
-            <label className="text-gray" htmlFor="firstname">
-              firstname
-            </label>
-            <input
-              ref={firstname}
-              id="firstname"
-              placeholder="Full name"
-              type="text"
-              className="shadowappearance"
-            />
-          </div>
-          <div className="flexflex-colmb-4">
-            <label className="text-gray" htmlFor="email">
-              Email
-            </label>
-            <input
-              ref={email}
-              id="email"
-              placeholder="Email"
-              type="email"
-              className="shadowappearance"
-            />
-          </div>
-          <div className="flexflex-colmb-4">
-            <label className="text-gray" htmlFor="password">
-              Password
-            </label>
-            <input
-              ref={password}
-              id="password"
-              placeholder="Password"
-              type="password"
-              className="shadowappearance"
-            />
-          </div>
-          <div className="flexflex-colmb-4">
-            <label className="text-gray" htmlFor="confirmpassword">
-              Password Confirmation
-            </label>
-            <input
-              ref={confirmpassword}
-              id="confirmpassword"
-              placeholder="Password Confirmation"
-              type="password"
-              className="shadowappearance"
-            />
-          </div>
-          <input
-            className="bg-blue-500"
-            type="submit"
-            autoComplete="on"
-            value="Envoyer"
-          />
-        </form>
       </div>
+      <form
+        className={styles.formulaire_form_container}
+        onSubmit={formHandler()}
+      >
+        <div className={styles.formulaire_form_label_input}>
+          <label className="text-gray" htmlFor="firstname">
+            firstname
+          </label>
+          <input
+            ref={firstname}
+            id="firstname"
+            placeholder="Full name"
+            type="text"
+            className="shadowappearance"
+          />
+        </div>
+        <div className={styles.formulaire_form_label_input}>
+          <label className="text-gray" htmlFor="email">
+            Email
+          </label>
+          <input
+            ref={email}
+            id="email"
+            placeholder="Email"
+            type="email"
+            className="shadowappearance"
+          />
+        </div>
+        <div className={styles.formulaire_form_label_input}>
+          <label className="text-gray" htmlFor="password">
+            Password
+          </label>
+          <input
+            ref={password}
+            id="password"
+            placeholder="Password"
+            type="password"
+            className="shadowappearance"
+          />
+        </div>
+        <div className={styles.formulaire_form_label_input}>
+          <label className="text-gray" htmlFor="confirmpassword">
+            Password Confirmation
+          </label>
+          <input
+            ref={confirmpassword}
+            id="confirmpassword"
+            placeholder="Password Confirmation"
+            type="password"
+            className="shadowappearance"
+          />
+        </div>
+        <input
+          className={styles.formulaire_form_input_button}
+          type="submit"
+          autoComplete="on"
+          value="Envoyer"
+        />
+      </form>
     </>
   );
 };

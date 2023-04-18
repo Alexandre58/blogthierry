@@ -29,7 +29,7 @@ const NavBar = () => {
         <Link
           href={"/web"}
           className={
-            router.pathname === "/web"
+            router.pathname === "/[web]"
               ? styles.navbar_Nav_link_active
               : styles.navbar_Nav_link
           }
